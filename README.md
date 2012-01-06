@@ -68,4 +68,3 @@ This project was created to help make ScalaTest part of our builds at [TheLadder
 This was a good way to introduce Scala in low-risk ways with our test source.
 It's allowed us to learn at a gentle pace and prepared us for the production Scala we're writing now.
 
-Copyright 2012 Charles Kreps.
