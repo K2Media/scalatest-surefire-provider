@@ -42,7 +42,7 @@ class ArgCreator(paramReader:ParameterReader)
 
   def stdOutReporter = List("-o")
 
-  def customReporter = List("-r", classOf[ReportingDelegate].getName)
+  def customReporter = List("-C", classOf[ReportingDelegate].getName)
 
   /**
    * Returns the arg for turning on parallel test execution if
