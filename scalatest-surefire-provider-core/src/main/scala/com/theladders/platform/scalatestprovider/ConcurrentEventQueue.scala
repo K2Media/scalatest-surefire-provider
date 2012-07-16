@@ -1,7 +1,7 @@
 package com.theladders.platform.com.theladders.platform.scalatestprovider
 
 import java.lang.{Integer => JInteger}
-import org.apache.maven.surefire.report.{StackTraceWriter, ReportEntry, RunListener}
+import org.apache.maven.surefire.report.{SafeThrowable, StackTraceWriter, ReportEntry, RunListener}
 import java.lang.Integer.MIN_VALUE
 import java.io.{PrintWriter, StringWriter}
 import java.util.concurrent.ConcurrentLinkedQueue
@@ -200,6 +200,6 @@ case class ConcurrentEventQueue()
 
     override def writeTrimmedTraceToString = formattedStackTraceString
 
-    override def getThrowable = throwable
+    override def getThrowable = new SafeThrowable(throwable)
   }
 }
