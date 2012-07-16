@@ -146,6 +146,8 @@ case class ConcurrentEventQueue()
     }
 
     def getName:String = name.getOrElse(null)
+
+    def getMessage = throwable.orNull
   }
 
   /**
